@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: arjun-deploy
+  labels: 
+    app: arjun
+spec:
+  selector:
+    matchLabels:
+      app: arjun
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: arjun
+    spec:
+      containers:
+      - name: arjun-webby 
+        image: reg.alta3.com/1428-purushothaman-webby
+        ports: 
+        - containerPort: 8953
