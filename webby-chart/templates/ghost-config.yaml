@@ -1,0 +1,36 @@
+apiVersion: v1
+data:
+  ghost-config.js: |
+    var path = require('path'),
+        config;
+
+    config = {
+        development: {
+            url: 'http://localhost:2368/blog/',
+            database: {
+                client: 'sqlite3',
+                connection: {
+                    filename: path.join(process.env.GHOST_CONTENT,
+                                        '/data/ghost-dev.db')
+                },
+                debug: false
+            },
+            server: {
+                host: '0.0.0.0',
+                port: '2368'
+            },
+            paths: {
+                contentPath: path.join(process.env.GHOST_CONTENT, '/')
+            }
+        }
+    };
+
+    module.exports = config;
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2020-02-28T17:57:11Z"
+  name: ghost-config
+  namespace: default
+  resourceVersion: "553693"
+  selfLink: /api/v1/namespaces/default/configmaps/ghost-config
+  uid: d590884b-da9a-47ee-8b2b-f518741708dc
