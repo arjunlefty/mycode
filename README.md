@@ -1,4 +1,4 @@
-# mycode (Project Title)
+# mycode (Kubernetes)
 
 Kubernetes Samples
 
@@ -10,12 +10,11 @@ on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them. For now, maybe copy in
-how to install Python and Python3 using apt.
+What things you need to install the software and how to install them.
 
 ## Built With
 
-* [Python](https://www.python.org/) - The coding language used
+* YAML
 
 ## Authors
 
